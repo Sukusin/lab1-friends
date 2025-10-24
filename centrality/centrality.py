@@ -49,13 +49,13 @@ def build_graph(friends_map):
     vertex = set()
 
     for user_id, friends in friends_map.items():
-        u = str(user_id)
-        vertex.add(u)
+        user = str(user_id)
+        vertex.add(user)
         for friend_id in friends:
-            v = str(friend_id)
-            if u != v:
-                vertex.add(v)
-                edge = tuple(sorted((u, v)))
+            friend = str(friend_id)
+            if user != friend:
+                vertex.add(friend)
+                edge = tuple(sorted((user, friend)))
                 edges.add(edge)
 
     vertices = list(vertex)
