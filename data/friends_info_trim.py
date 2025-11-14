@@ -11,7 +11,7 @@ with open('friends_info.json', 'r', encoding='utf-8') as file:
 
 filtered_info = {uid: info for uid, info in all_info.items() if uid in allowed_ids}
 
-with open('small_friends_info.json', 'w', encoding='utf-8') as file:
+with open('friends_info.json', 'w', encoding='utf-8') as file:
     json.dump(filtered_info, file, ensure_ascii=False, indent=2)
 
 print(f"Сохранено {len(filtered_info)} пользователей в small_friends_info.json")

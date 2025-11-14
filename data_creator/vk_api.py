@@ -24,7 +24,7 @@ async def check_api_error(data: dict) -> APIError:
         '''Ошибка, что у пользователя закрытый профиль'''
         return APIError.NONE
     else:
-        print(f'code: {error['error_code']} - {error['error_msg']}')
+        print(f"code: {error['error_code']} - {error['error_msg']}")
         return APIError.CRITICAL
 
 async def vk_request(

@@ -4,7 +4,7 @@ from data_creator.data_collector import create_friends_info_json
 from centrality.centrality import get_centrality
 
 
-ACCESS_TOKEN = 'your_api_key'
+ACCESS_TOKEN = 'vk1.a.k92dWl5YnAgjMzy4G1m4xzP9uQzbfq5EcZcMzulLDIrTAiHEn_XuemM4JVoF8qkuXiYFjpCJp3VFwpbElzoIrkhxqHGvw5zoYhVkTO-UPs2MQRLSfTvUcVAWyyxISvTP0SAYB7liQmXwNeRmVeTU9f8psigYSvLhh2xYlPvALWDl_SKr8fsPBcmQwqkR1AHHqMGz3AYFgHdetIvpvjHbpQ'
 API_VERSION = '5.199'
 
 async def get_all_data(
@@ -15,9 +15,9 @@ async def get_all_data(
         file_out_friends_map: str,
         file_out_friends_info: str
 ):
-    #await create_friends_map_json(start_uids, access_token, api_version, depth, file_out_friends_map)
-    #await create_friends_info_json(access_token, api_version, file_out_friends_map, file_out_friends_info)\
-    pass
+    await create_friends_map_json(start_uids, access_token, api_version, depth, file_out_friends_map)
+    await create_friends_info_json(access_token, api_version, file_out_friends_map, file_out_friends_info)\
+    # pass
 
 def fill_start_uids(file_name: str) -> list[str]:
     try:
