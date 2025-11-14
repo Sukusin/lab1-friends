@@ -166,7 +166,7 @@ def print_result(file_name: str) -> None:
         "eigenvector": eigenvector,
     })
     df = df.fillna(0.0).replace([float('inf'), -float('inf')], 0.0)
-    df.to_csv("../centrality_results_fast.csv", index=False, encoding="utf-8-sig")
+    df.to_csv("centrality/centrality_results_fast.csv", index=False, encoding="utf-8-sig")
 
 def get_centrality(file_name: str) -> None:
     print_result(file_name)

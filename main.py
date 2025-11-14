@@ -15,9 +15,9 @@ async def get_all_data(
         file_out_friends_map: str,
         file_out_friends_info: str
 ):
-    await create_friends_map_json(start_uids, access_token, api_version, depth, file_out_friends_map)
-    await create_friends_info_json(access_token, api_version, file_out_friends_map, file_out_friends_info)\
-    # pass
+    # await create_friends_map_json(start_uids, access_token, api_version, depth, file_out_friends_map)
+    # await create_friends_info_json(access_token, api_version, file_out_friends_map, file_out_friends_info)
+    pass
 
 def fill_start_uids(file_name: str) -> list[str]:
     try:
