@@ -15,9 +15,9 @@ async def get_all_data(
         file_out_friends_map: str,
         file_out_friends_info: str
 ):
-    await create_friends_map_json(start_uids, access_token, api_version, depth, file_out_friends_map)
-    await create_friends_info_json(access_token, api_version, file_out_friends_map, file_out_friends_info)\
-    #pass
+    #await create_friends_map_json(start_uids, access_token, api_version, depth, file_out_friends_map)
+    #await create_friends_info_json(access_token, api_version, file_out_friends_map, file_out_friends_info)\
+    pass
 
 def fill_start_uids(file_name: str) -> list[str]:
     try:
@@ -41,9 +41,9 @@ START_UIDS = [
     "https://vk.com/id154151541",
     "https://vk.com/fcmmp"
 ]
-#START_UIDS = fill_start_uids("small_friends_map.json") # Тестовый вариант
-file_out_friends_map = "friends_map.json"
-file_out_name_info = "friends_info.json"
+#START_UIDS = fill_start_uids("data/small_friends_map.json") # Тестовый вариант
+file_out_friends_map = "data/friends_map.json"
+file_out_name_info = "data/friends_info.json"
 
 start = time.time()
 asyncio.run(get_all_data(START_UIDS, ACCESS_TOKEN, API_VERSION, 2, file_out_friends_map, file_out_name_info))

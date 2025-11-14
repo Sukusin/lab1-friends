@@ -80,7 +80,7 @@ def betweenness_calculation(graph: ig.Graph):
     n_nodes = graph.vcount()
 
     if k >= n_nodes:
-        print("Граф небольшой — считаем точную betweenness.")
+        print("Граф небольшой — считаем точные центральности.")
         betweenness = graph.betweenness()
     else:
         print(f"Аппроксимация betweenness по {k} случайным источникам...")
